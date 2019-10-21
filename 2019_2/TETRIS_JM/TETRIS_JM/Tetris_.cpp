@@ -300,6 +300,7 @@ void Tetris_::previewblock(int dir, Tetris t)
 
 void Tetris_::array_down(int line)
 {
+	sound sound;
 	for (int i = line; i > 2; i--)
 		for (int j = 0; j < 11; j++)
 			board[i][j] = board[i - 1][j];
@@ -413,6 +414,7 @@ void Tetris_::initblock(int* blockarr)
 
 void Tetris_::Game()
 {
+	sound sound;
 	Tetris t;
 
 	SetCursor(FALSE);
@@ -499,6 +501,7 @@ void Tetris_::Game()
 					else
 						t.curX -= 2;
 					printblock(t);
+					sound.Sound_Play(5);
 					break;
 				case RIGHT:
 					previewblock(RIGHT, t);
@@ -508,6 +511,7 @@ void Tetris_::Game()
 					else
 						t.curX += 2;
 					printblock(t);
+					sound.Sound_Play(5);
 					break;
 				case DOWN:
 					removeblock(t);

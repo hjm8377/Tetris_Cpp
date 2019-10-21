@@ -231,5 +231,5 @@ public:
 	void initblock(int* blockarr);
 	void Game();	//게임진행 함수
 
-	sound sound;
+	
 };
