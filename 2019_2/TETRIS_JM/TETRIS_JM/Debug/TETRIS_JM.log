@@ -1,2 +1,4 @@
-﻿  Tetris_.cpp
+﻿  sound.cpp
+D:\GIt\Baram Project\2019_2\TETRIS_JM\TETRIS_JM\sound.cpp(76,18): warning C4305:  '-=': 'double'에서 'float'(으)로 잘립니다.
+D:\GIt\Baram Project\2019_2\TETRIS_JM\TETRIS_JM\sound.cpp(81,18): warning C4305:  '+=': 'double'에서 'float'(으)로 잘립니다.
   TETRIS_JM.vcxproj -> D:\GIt\Baram Project\2019_2\TETRIS_JM\Debug\TETRIS_JM.exe

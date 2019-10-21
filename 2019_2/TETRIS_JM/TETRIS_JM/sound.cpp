@@ -2,7 +2,7 @@
 
 FMOD_SYSTEM* g_System; //FMOD system 변수선언
 FMOD_SOUND* g_Sound[6];
-FMOD_CHANNEL* channel = NULL;
+FMOD_CHANNEL* channel[6] = { 0, };
 
 FMOD_BOOL IsPlaying;
 
@@ -33,12 +33,12 @@ void sound::Init(void)
 
 void sound::StopSound(void)
 {
-	FMOD_Channel_Stop(channel); //채널의 소리 모두정지 
+	FMOD_Channel_Stop(channel[0]); //채널의 소리 모두정지 
 }
 
 void sound::VolumeSetSound(void)
 {
-	FMOD_Channel_SetVolume(channel, volume); //설정 볼륨으로 소리크기 지정 
+	FMOD_Channel_SetVolume(channel[0], volume); //설정 볼륨으로 소리크기 지정 
 }
 
 void sound::SoundUpdate(void)
@@ -123,5 +123,5 @@ void sound::printSoundBar(float n)
 
 void sound::Sound_Play(int n)
 {
-	FMOD_System_PlaySound(g_System, FMOD_CHANNEL_FREE, g_Sound[n], 0, &channel);
+	FMOD_System_PlaySound(g_System, FMOD_CHANNEL_FREE, g_Sound[n], 0, &channel[n]);
 }
