@@ -1,7 +1,7 @@
 #include "sound.h"
 
 FMOD_SYSTEM* g_System; //FMOD system 변수선언
-FMOD_SOUND* g_Sound[5];
+FMOD_SOUND* g_Sound[6];
 FMOD_CHANNEL* channel = NULL;
 
 FMOD_BOOL IsPlaying;
@@ -28,6 +28,7 @@ void sound::Init(void)
 	FMOD_System_CreateSound(g_System, "D:\\GIt\\Baram\\TETRIS_JM\\TETRIS_JM\\BGM\\gameover.mp3", FMOD_LOOP_OFF, 0, &g_Sound[2]);
 	FMOD_System_CreateSound(g_System, "D:\\GIt\\Baram\\TETRIS_JM\\TETRIS_JM\\BGM\\pause.mp3", FMOD_LOOP_OFF, 0, &g_Sound[3]);
 	FMOD_System_CreateSound(g_System, "D:\\GIt\\Baram\\TETRIS_JM\\TETRIS_JM\\BGM\\block-rotate.mp3", FMOD_LOOP_OFF, 0, &g_Sound[4]);
+	FMOD_System_CreateSound(g_System, "D:\\GIt\\Baram\\TETRIS_JM\\TETRIS_JM\\BGM\\whoosh.mp3", FMOD_LOOP_OFF, 0, &g_Sound[5]);
 }
 
 void sound::StopSound(void)

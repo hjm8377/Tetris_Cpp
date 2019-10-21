@@ -88,6 +88,7 @@ int Init::menu()
 				printf("  ");
 				GotoXY(x - 2, --y);
 				printf(">");
+				sound.Sound_Play(5);
 			}
 			break;
 		case DOWN:
@@ -96,6 +97,7 @@ int Init::menu()
 				printf("  ");
 				GotoXY(x - 2, ++y);
 				printf(">");
+				sound.Sound_Play(5);
 			}
 			break;
 		case ENTER:
